@@ -1,0 +1,10 @@
+{
+    "id": "chariot",
+    "name": "The Chariot",
+    "author": ["Aure"],
+    "description": "Fast shop rerolls for finding specific items.",
+    "main_file": "Chariot.lua",
+    "prefix": "chariot",
+    "version": "0.1.0",
+    "badge_colour": "a782d1"
+}
