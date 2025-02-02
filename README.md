@@ -1,0 +1,2 @@
+# The Chariot
+This is a simple Balatro mod that lets you automatically reroll the shop for a card of your choosing. To use it, simply click on the card you would like to reroll for in the collection or [Too Many Jokers](https://github.com/cg-223/toomanyjokers). It is recommended to use [Nopeus](https://github.com/jenwalter666/JensBalatroCollection/tree/main/Nopeus) to increase the game speed.
