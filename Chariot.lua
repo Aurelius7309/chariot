@@ -21,28 +21,11 @@ end
 
 local cc = Card.click
 function Card:click()
-    local in_collection
-    if G.your_collection then
-        if G.your_collection.cards then
-            for _,v in ipairs(G.your_collection.cards) do if v == self then in_collection = true; break end end
-        elseif G.your_collection[1] and G.your_collection[1].cards then
-            for _,c in ipairs(G.your_collection) do
-                for _,v in ipairs(c.cards) do if v == self then in_collection = true; break end end
-                if in_collection then break end
-            end
-        end
-    end
-    if G.TMJCOLLECTION and G.TMJCOLLECTION[1] and G.TMJCOLLECTION[1].cards then
-        for _,c in ipairs(G.TMJCOLLECTION) do
-            for _,v in ipairs(c.cards) do if v == self then in_collection = true; break end end
-            if in_collection then break end
-        end
-    end
-    if in_collection and G.STATE == G.STATES.SHOP then
+    if self.area and self.area.config.collection and G.STATE == G.STATES.SHOP then
         G.FUNCS.exit_overlay_menu()
         G.E_MANAGER:add_event(Event({
             func = function()
-                chariot.reroll(self.config.center_key)
+                chariot.reroll(self.config.center.key)
                 return true
             end
         }))
